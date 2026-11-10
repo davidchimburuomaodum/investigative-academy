@@ -85,7 +85,7 @@
             <span>${percentage}% completed</span>
             <button class="primary-button open-course"
               data-course="${escapeHTML(course.id)}">
-              ${completed ? "Continue course" : "Start learning"} →
+              ${completed ? "Continue programme" : "Enter programme"} →
             </button>
           </div>
         </article>`;

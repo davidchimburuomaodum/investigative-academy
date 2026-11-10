@@ -3,8 +3,8 @@ window.InvestigativeCourses = [
     id: "foundations-investigation",
     title: "Investigative Methods and Evidence Analysis",
     department: "Investigative Thinking",
-    level: "Beginner",
-    description: "Learn the foundations of responsible, evidence-based investigation.",
+    level: "Foundational Programme",
+    description: "Build professional investigative judgement through structured study, critical analysis and evidence-based methods.",
     passingScore: 80,
     xpReward: 200,
     modules: [
