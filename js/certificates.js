@@ -52,6 +52,7 @@
     return "IA-DCO-" + new Date().getFullYear() + "-" + random;
   }
 
+
   function showCertificate(certificate) {
     const root = document.getElementById("certificate-exam-root");
     if (!root) return;
@@ -61,60 +62,73 @@
     const lessonContent = document.getElementById("lesson-content");
     if (lessonContent) lessonContent.hidden = true;
 
+    const courseTitle =
+      getCourse(certificate.courseId)?.title ||
+      certificate.courseTitle || "Course Completion";
+
+    const issuedDate = new Date(certificate.issuedAt).toLocaleDateString(
+      undefined, { day: "2-digit", month: "long", year: "numeric" }
+    );
+
     root.innerHTML = `
       <article class="certificate-paper">
-        <div class="certificate-brand">
-          <img src="assets/dco-company-logo.jpg"
-               alt="DCO Cyber Solutions company logo">
-          <span>DCO CYBER SOLUTIONS</span>
+        <div class="certificate-frame">
+          <header class="certificate-header">
+            <div class="certificate-brand">
+              <img src="assets/dco-company-logo.jpg" alt="DCO Cyber Solutions">
+              <div>
+                <strong>DCO CYBER SOLUTIONS</strong>
+                <span>INVESTIGATIVE ACADEMY</span>
+              </div>
+            </div>
+            <div class="certificate-motto">
+              LEARN <i>•</i> INVESTIGATE <i>•</i> SECURE
+            </div>
+          </header>
+
+          <main class="certificate-main">
+            <p class="certificate-academy">OFFICIAL ACADEMY RECOGNITION</p>
+            <div class="certificate-title-band">CERTIFICATE OF COMPLETION</div>
+            <p class="certificate-presented">This certificate is proudly presented to</p>
+            <h1 class="certificate-name">${escapeHTML(certificate.learnerName)}</h1>
+            <div class="certificate-ornament">◆ ━━━━━━━━━ ◆ ━━━━━━━━━ ◆</div>
+            <p class="certificate-intro">for successfully completing the course</p>
+            <h2 class="certificate-course">${escapeHTML(courseTitle)}</h2>
+            <p class="certificate-description">
+              Having successfully completed all required learning modules
+              and course requirements at the DCO Cyber Solutions Investigative Academy.
+            </p>
+          </main>
+
+          <footer class="certificate-footer">
+            <div class="certificate-meta">
+              <span>DATE ISSUED</span>
+              <strong>${escapeHTML(issuedDate)}</strong>
+            </div>
+
+            <div class="certificate-seal">
+              <span>◆</span>
+              <strong>DCO</strong>
+              <small>CYBER SOLUTIONS</small>
+            </div>
+
+            <div class="certificate-meta certificate-id">
+              <span>CERTIFICATE ID</span>
+              <strong>${escapeHTML(certificate.certificateId)}</strong>
+            </div>
+
+            <div class="certificate-signature">
+              <span class="signature-mark">OAO</span>
+              <span class="signature-line"></span>
+              <strong>Founder &amp; CEO</strong>
+              <span>DCO CYBER SOLUTIONS</span>
+            </div>
+          </footer>
+
+          <p class="certificate-authority">
+            Issued by DCO Cyber Solutions Investigative Academy
+          </p>
         </div>
-        <p class="certificate-kicker">INVESTIGATIVE ACADEMY</p>
-        <div class="certificate-rule"></div>
-
-        <p class="certificate-label">CERTIFICATE OF COMPLETION</p>
-        <h1>Certificate of Achievement</h1>
-        <p class="certificate-intro">This certificate is proudly presented to</p>
-
-        <h2 class="certificate-name">${escapeHTML(certificate.learnerName)}</h2>
-
-        <p class="certificate-intro">
-          for successfully completing the course
-        </p>
-
-        <h2 class="certificate-course">${escapeHTML(getCourse(certificate.courseId)?.title || certificate.courseTitle)}</h2>
-
-        <p class="certificate-description">
-          Having completed all required lessons and achieved the required
-          standard in the final assessment.
-        </p>
-
-        <div class="certificate-result">
-          <span>FINAL ASSESSMENT</span>
-          <strong>${certificate.score}%</strong>
-        </div>
-
-        <div class="certificate-footer">
-          <div>
-            <span>DATE ISSUED</span>
-            <strong>${escapeHTML(new Date(certificate.issuedAt).toLocaleDateString())}</strong>
-          </div>
-          <div>
-            <span>CERTIFICATE ID</span>
-            <strong>${escapeHTML(certificate.certificateId)}</strong>
-          </div>
-        </div>
-
-        <div class="certificate-signature">
-          <span class="signature-mark">OAO</span>
-          <span class="signature-line"></span>
-          <strong>Founder &amp; CEO</strong>
-          <span>DCO CYBER SOLUTIONS</span>
-        </div>
-
-        <p class="certificate-authority">
-          Issued by Investigative Academy — By DCO Cyber Solutions.
-          Platform-issued certificate of course completion.
-        </p>
       </article>
 
       <div class="certificate-actions">
