@@ -1,0 +1,14 @@
+@media(max-width:360px) {
+  .brand {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .stat-card {
+    padding: 12px 7px;
+  }
+
+  .stat-card strong {
+    font-size: 20px;
+  }
+}

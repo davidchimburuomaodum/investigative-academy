@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="Investigative Academy by DCO Cyber Solutions - Learn observation, psychology, critical thinking and investigative skills.">
+
+  <title>Investigative Academy | DCO Cyber Solutions</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+
+
+
+<div class="app-shell">
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">IA</span>
+      <span>INVESTIGATIVE <b>ACADEMY</b><small class="brand-byline">BY DCO CYBER SOLUTIONS</small></span>
+    </a>
+
+    <button class="profile-button" id="profileButton">D</button>
+  </header>
+
+  <main class="main-content">
+
+    <section class="welcome-section">
+      <p class="eyebrow">INVESTIGATIVE DEVELOPMENT PROGRAMME</p>
+      <h1>Think beyond <span>the obvious.</span></h1>
+      <p class="welcome-description">
+        Develop your mind. Sharpen your observation.
+        Understand human behaviour.
+      </p>
+    </section>
+
+    <section class="level-card">
+      <div class="level-header">
+        <div>
+          <p class="muted">YOUR CURRENT RANK</p>
+          <h2 id="rank">Novice Investigator</h2>
+        </div>
+        <div class="level-number" id="level">01</div>
+      </div>
+
+      <div class="progress-info">
+        <span id="xp">0 XP</span>
+        <span id="nextXP">100 XP to next level</span>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-fill" id="progress"></div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>COMPLETED LESSONS</span>
+        <strong id="lessonsCompleted">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span>TOTAL XP</span>
+        <strong id="totalXP">0</strong>
+      </article>
+
+      <article class="stat-card">
+        <span>MISSIONS</span>
+        <strong id="missionsCompleted">0</strong>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR DAILY ASSIGNMENT</p>
+          <h2>Daily Mission</h2>
+        </div>
+        <span class="gold-label">01 / DAY</span>
+      </div>
+
+      <article class="mission-card">
+        <div class="mission-icon">◎</div>
+        <p class="eyebrow">OBSERVATION TRAINING</p>
+        <h3>Notice What Others Overlook</h3>
+        <p>
+          Observe your surroundings carefully.
+          Identify five details you had not consciously
+          noticed before.
+        </p>
+        <button id="completeMission" class="primary-button">
+          Complete Mission · +20 XP
+        </button>
+        <p id="missionStatus" class="mission-status"></p>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR CURRICULUM</p>
+          <h2>Training Departments</h2>
+        </div>
+      </div>
+
+      <div class="department-grid" id="departments">
+
+        <article class="department-card">
+          <span>01</span>
+          <h3>Observation</h3>
+          <p>Attention, detail and memory.</p>
+        </article>
+
+        <article class="department-card">
+          <span>02</span>
+          <h3>Psychology</h3>
+          <p>Human behaviour and emotions.</p>
+        </article>
+
+        <article class="department-card">
+          <span>03</span>
+          <h3>Body Language</h3>
+          <p>Non-verbal communication.</p>
+        </article>
+
+        <article class="department-card">
+          <span>04</span>
+          <h3>Investigative Thinking</h3>
+          <p>Evidence and logical deductions.</p>
+        </article>
+
+        <article class="department-card">
+          <span>05</span>
+          <h3>Strategic Thinking</h3>
+          <p>Planning and problem-solving.</p>
+        </article>
+
+        <article class="department-card">
+          <span>06</span>
+          <h3>Interviewing</h3>
+          <p>Questions, listening and rapport.</p>
+        </article>
+
+        <article class="department-card">
+          <span>07</span>
+          <h3>Hypnosis</h3>
+          <p>Suggestion and focused attention.</p>
+        </article>
+
+        <article class="department-card">
+          <span>08</span>
+          <h3>Forensic Reasoning</h3>
+          <p>Evidence and forensic science.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">INVESTIGATIVE PRACTICE</p>
+          <h2>Enter the Case Files</h2>
+        </div>
+      </div>
+
+      <article class="case-card">
+        <p class="eyebrow">TRAINING SIMULATION</p>
+        <h3>The Missing Document</h3>
+        <p>
+          Examine a fictional situation, evaluate
+          the available information and identify
+          what further evidence is needed.
+        </p>
+        <button class="secondary-button" id="caseButton">
+          Explore Case Files →
+        </button>
+      </article>
+    </section>
+
+  </main>
+
+
+
+<section id="cases-view" class="cases-view" hidden>
+  <div class="cases-page-header">
+    <p class="eyebrow">INVESTIGATIVE ACADEMY / DEPARTMENT 02</p>
+    <h2>Case Files</h2>
+    <p>Examine evidence. Evaluate accounts. Build defensible conclusions.</p>
+  </div>
+
+  <div id="case-catalogue"></div>
+
+  <div id="case-reader" hidden>
+    <button type="button" id="back-to-case-library" class="case-back-button">
+      ← All cases
+    </button>
+    <div id="case-content"></div>
+  </div>
+</section>
+
+<section id="academy-view" class="academy-view" hidden>
+  <div class="academy-header">
+    <p class="eyebrow">INVESTIGATIVE ACADEMY</p>
+    <h2>Your Learning Centre</h2>
+    <p>Build knowledge through structured lessons and practical exercises.</p>
+  </div>
+
+  <div id="academy-catalogue">
+    <div class="academy-progress-card">
+      <div>
+        <span class="eyebrow">YOUR PROGRESS</span>
+        <h3 id="academy-progress-count">0 lessons completed</h3>
+      </div>
+      <span class="academy-progress-icon">IA</span>
+    </div>
+    <div id="course-list" class="course-list"></div>
+  </div>
+
+  <div id="academy-reader" hidden>
+    <button type="button" class="academy-back" id="back-to-courses">← All courses</button>
+    <div id="lesson-content"></div>
+  </div>
+</section>
+
+
+<section id="gym-view" class="department-view" hidden>
+  <div id="gym-content"></div>
+</section>
+
+<section id="profile-view" class="department-view" hidden>
+  <div id="profile-content"></div>
+</section>
+
+  <nav class="bottom-nav">
+    <a class="active" href="#home">Home</a>
+    <a href="#academy">Academy</a>
+    <a href="#cases">Cases</a>
+    <a href="#gym">Mental Gym</a>
+    <a href="#profile">Profile</a>
+  </nav>
+
+</div>
+
+<script src="data/lessons.js"></script>
+<script src="data/cases.js"></script>
+<script src="data/challenges.js"></script>
+<script src="data/case-assessment-upgrade.js"></script>
+<script src="data/final-exam.js"></script>
+<script src="js/app.js"></script>
+<script src="js/academy.js"></script>
+<script src="js/case-files.js"></script>
+<script src="js/mental-gym.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/certificates.js"></script>
+<script src="js/navigation.js"></script>
+</body>
+</html>

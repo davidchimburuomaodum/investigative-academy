@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+.env
+node_modules/
+*.log
+
+# Local recovery backups
+.web-only-backup/
+*.certificate-backup
+*.before-removing-verification
+*.pre-certificate-history
