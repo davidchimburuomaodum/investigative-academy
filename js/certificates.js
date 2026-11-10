@@ -81,9 +81,7 @@
                 <span>INVESTIGATIVE ACADEMY</span>
               </div>
             </div>
-            <div class="certificate-motto">
-              LEARN <i>•</i> INVESTIGATE <i>•</i> SECURE
-            </div>
+
           </header>
 
           <main class="certificate-main">
@@ -106,8 +104,17 @@
               <strong>${escapeHTML(issuedDate)}</strong>
             </div>
 
-            <div class="certificate-seal">
-              <span>◆</span>
+            <div class="certificate-seal" aria-label="DCO Cyber Solutions shield emblem">
+              <svg class="dco-shield" viewBox="0 0 100 112" aria-hidden="true">
+                <path d="M50 4 L91 19 V49 C91 76 73 96 50 108 C27 96 9 76 9 49 V19 Z"
+                  fill="#d5a638" stroke="#f5df9b" stroke-width="3"/>
+                <path d="M50 13 L82 25 V49 C82 70 68 86 50 97 C32 86 18 70 18 49 V25 Z"
+                  fill="#101d32" stroke="#fff0bd" stroke-width="1.5"/>
+                <path d="M30 43 H42 L50 32 L58 43 H70 M50 32 V66"
+                  fill="none" stroke="#e7b844" stroke-width="3" stroke-linecap="round"/>
+                <text x="50" y="79" text-anchor="middle" fill="#fff0bd"
+                  font-size="17" font-weight="900" letter-spacing="2">DCO</text>
+              </svg>
               <strong>DCO</strong>
               <small>CYBER SOLUTIONS</small>
             </div>

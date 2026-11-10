@@ -1396,24 +1396,38 @@ button {
 }
 
 .certificate-seal {
-  width: 92px;
-  height: 92px;
+  width: 112px;
+  min-height: 112px;
   margin: auto;
-  border: 4px double #e7b844;
-  border-radius: 50%;
-  background: radial-gradient(circle,#ffe7a0,#c18b24);
-  color: #101d32;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  color: #e7b844;
 }
 
-.certificate-seal > span { font-size: 17px; }
-.certificate-seal strong { font-size: 22px; }
+.dco-shield {
+  display: block;
+  width: 62px;
+  height: 70px;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.3));
+}
+
+.certificate-seal strong {
+  font-size: 13px;
+  letter-spacing: .18em;
+  color: #e7b844;
+}
+
 .certificate-seal small {
-  font-size: 7px;
+  font-size: 6px;
   font-weight: 900;
+  letter-spacing: .12em;
+  color: #e7b844;
 }
 
 .certificate-signature {
