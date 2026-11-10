@@ -1392,3 +1392,46 @@ button {
   font-weight: 800;
   letter-spacing: .08em;
 }
+
+
+/* OFFICIAL DCO CERTIFICATE SIGNATURE */
+.certificate-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin: 28px auto 12px;
+  text-align: center;
+  color: #51452d;
+}
+
+.signature-mark {
+  font-family: "URW Chancery L", "Apple Chancery",
+               "Brush Script MT", "Segoe Script", cursive;
+  font-size: 58px;
+  font-style: italic;
+  font-weight: 500;
+  color: #b99a55;
+  letter-spacing: -4px;
+  line-height: 1.15;
+  transform: rotate(-9deg) skewX(-8deg);
+  text-shadow: 0 1px 1px rgba(185, 154, 85, 0.2);
+  padding: 5px 18px 10px;
+}
+
+.signature-line {
+  width: 190px;
+  border-top: 1px solid #b99a55;
+  margin: 2px 0 5px;
+}
+
+.certificate-signature strong {
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.certificate-signature > span:last-child {
+  font-size: 10px;
+  letter-spacing: .13em;
+  color: #947331;
+}

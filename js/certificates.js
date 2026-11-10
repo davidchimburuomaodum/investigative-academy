@@ -104,6 +104,13 @@
           </div>
         </div>
 
+        <div class="certificate-signature">
+          <span class="signature-mark">OAO</span>
+          <span class="signature-line"></span>
+          <strong>Founder &amp; CEO</strong>
+          <span>DCO CYBER SOLUTIONS</span>
+        </div>
+
         <p class="certificate-authority">
           Issued by Investigative Academy — By DCO Cyber Solutions.
           Platform-issued certificate of course completion.
