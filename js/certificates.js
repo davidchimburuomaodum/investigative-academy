@@ -127,14 +127,12 @@
             <div class="certificate-signature">
               <span class="signature-mark">OAO</span>
               <span class="signature-line"></span>
-              <strong>Founder &amp; CEO</strong>
+              <strong>David Chimburuoma Odum</strong>
+              <span>Founder &amp; CEO</span>
               <span>DCO CYBER SOLUTIONS</span>
             </div>
           </footer>
 
-          <p class="certificate-authority">
-            Issued by DCO Cyber Solutions Investigative Academy
-          </p>
         </div>
       </article>
 
